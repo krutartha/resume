@@ -1,24 +1,117 @@
-\documentclass{article}
+\documentclass[10pt]{article}
 
+\usepackage{titlesec} 
+\usepackage{fontawesome}
+\usepackage{xhfill}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{enumitem}
+\geometry{margin=0.4in}
+\setitemize{itemsep=-0.25em, leftmargin=*}
+%\pagecolor{black}
+%\color{white}
 
-\title{Resume}
-\author{Krutartha Nagesh}
-\date{October 17, 2023}
+\newcommand{\raisedrule}{\leaders\hbox{\rule[0em]{1pt}{1pt}}\hfill}
+\newcommand{\next}{ $|$ }
+\newcommand{\category}[1]{\section*{#1\raisedrule}}
+\newcommand{\experience}[5]{\subsection{\makebox[80pt][l]{#1} \hfill \makebox[80pt][c]{\underline{#2}} \hfill \makebox[80pt][r]{#3 #4}}#5}
+\newcommand{\contact}[2]{#1 \space #2}
+
+\titleformat{\section}
+{\bfseries\Large}
+{}
+{0em}
+{}[]
+
+\titlespacing*{\section}
+{0in}
+{-0.10in}
+{0in}[2pt]
+
+\titleformat{\subsection}
+{\bfseries}
+{}
+{0em}
+{}[\vspace{4pt}]
+
+\titlespacing*{\subsection}
+{0in}
+{0in}
+{0in}
 
 
 \begin{document}
-    \maketitle
-    \section{Education}
-        \subsection{Syracuse University}
-        \subsection{Stonehill International School}
-    \section{Skills}
-        \subsection{Languages}
-        \subsection{Technical}
-    \section{Relevant Experience}
-        \subsection{Student Consultant}
-        \subsection{Intern Blockchain Developer}
-        \subsection{Intern Fullstack Developer} 
-    \section{Relevant Projects}
-    \section{Achievements}
-\end{document}
 
+\title*{\LARGE 
+\begin{center}
+Krutartha Nagesh
+\end{center}}
+\begin{center}
+  \contact{\faEnvelope}{knagesh@syr.edu} \next \contact{\faPhone}{929-684-9019} \next \contact{\faLinkedin}{linkedin.com/in/krutartha} \next \contact{\faGithub}{github.com/krutartha} 
+\end{center}
+
+\category{Skills}
+\begin{itemize}
+	\item C\next C++\next Java\next Python\next Haskell\next Racket\next JavaScript\next TypeScript\next HTML\next CSS\next SQL\next Bash\next Dart\next Git\next PHP 
+	\item Tensorflow\next PyTorch\next Node\next Firebase\next React\next Tailwind\next Android Studio\next ReactNative\next Flutter\next Express\next jwt\next HyperLedger
+	\item UNIX\next Vim\next Jira\next Trello\next Agile\next DevOps\next \LaTeX\next \next UML\next REST APIs\next AWS\next Web3.0\next English, Kannada, Hindi (fluent)
+	\item Data Structures\next Algorithms\next Asymptomatic Analysis\next OOP \next Functional Programming\next Discrete Math\next Linear Algebra\next Multi Agent Systems\next Software Design\next Blockchain \next Systems \& Network Programming \next Operating Systems\next Prob \& Stats
+\end{itemize}
+
+\category{Experience}
+\experience{Consultant}{ITS-Syracuse University}{Syracuse, NY, USA}{12/2022-Current}{
+  \begin{itemize}
+	\item Serviced 75+ clientele(per week) with varied needs and backgrounds. Actively engaged clients to dynamically troubleshoot simple to complex issues and deliver quality resolves. Positively impacted client satisfaction and retention.
+	\item Collaborated with a team of 30+ student consultants and 20+ Full Time Staff to achieve smooth operations and hit targets. Balanced a fast-paced work environment by identifying shortcomings, strengths, and by monitoring metrics. Maintained a Issue-to-Ticket Conversion Rate of $>$95\%. Mastered tools like Jira, Cisco Finesse, and Webex in a short span.
+\end{itemize}}
+
+\experience{Blockchain Developer Intern}{TraceX Technologies}{Bengaluru, India}{09/2020-01/2021}{
+\begin{itemize}
+  \item Received mentorship from a team of 10 Full Stack Developers. Experienced Agile/Scrum Methods to actively contribute to team's performance. Used MEAN stack to develop the flagship B2B Food Supply Chain Blockchain Solution. 
+  \item Attended 15+ sales negotiations to grasp nuances of product selling. Designed presentations and made valuable additions to sales pitch, improving conversion rate by $\sim$10\%. Performed JAD and Interviews to understand clients' requirements. Was an important force in driving the startup to raise its first \$1M in Series A. 
+  \item Worked closely with the CTO, CEO a on-contract HyperLedger Fabric expert. Learned the Framework in a very short time in order to improve timelines by 20\% for the company. Used AWS, Go, Docker, Kubernetes to write, deploy, and test 20+ Smart Contracts for the flagship Blockchain solution.
+  \item Coded 100+ REST API endpoints in Express and Node for all Smart Contracts. Implemented Token Based Authentication using JWT to authenticate requests. Designed Middleware to prioritize requests based on token signature and tweaked cache optimization to reduce server load. Quickly learned new technologies like CouchDB and LevelDB to adapt to the company's tech stack and needs. Used SwaggerUI to write API Documentation and wrote 100+ tests using Jest for said endpoints.
+\end{itemize}
+}
+
+
+\experience{Full Stack Developer Intern}{Cisco}{Bengaluru, India}{08/2019-02/2020}{
+  \begin{itemize}
+	\item Led a team of 5 students with varied technical backgrounds to build a FullStack Reddit styled notes sharing app using Android Studio, Material Design, and Firebase. Administered internal Alpha testing and Beta testing with 25 end users.
+	\item Received mentorship from a FullStack Cisco Developer with MERN expertise for the entire 6 months for areas ranging from software development to team management and product presentation.
+  \item Collaborated with my team to handle common issues like skill gaps, merge conflicts, and bandwidth management.
+  \end{itemize}
+}
+
+
+\category{Education}
+\experience{Bachelor of Science, Computer Science}{Syracuse University}{Syracuse, NY, USA}{01/2021-05/2025}{
+  \begin{itemize}
+	\item 1870 Scholar\next Full Tuition Merit Scholarship\next Highest recognition by the Office of Admissions 
+	\item 3.93 GPA\next Renée Crown Honors Program \next Dean's List: Spring 2021, Fall 2021, Fall 2022, Spring 2023
+  \end{itemize}
+}  
+\experience{International Baccalaureate Diploma}{Stonehill International School}{Bengaluru, India}{08/2018-05/2020}{
+	\begin{itemize}
+	  \item 4.0 GPA\next 50\% Tuition and Boarding Merit Scholarship\next Research on impact of blockchain technologies on modern economies
+	\end{itemize}
+}
+
+\category{Projects}
+\begin{itemize}
+  \item MyAIGround -- AI Playground Dashboard for all my GAN, NLP, NN, and RNNs, and Image Classifier Models
+  \item Automations -- Bash Scripting Automations for Github Project Workflows, \LaTeX Workflows, and Web Scraping
+  \item Young Hindu Creators Collective -- Full Stack(MERN) Blog for sharing content by Hindu youth across North America  
+\end{itemize}
+
+\category{Others}
+\begin{itemize}
+	\item Tau Beta Pi  -- Oldest engineering honor society and the second oldest collegiate honor society in the United States. 
+	\item IEEE -- Professional association for electronics, electrical engineering, and related disciplines. 
+	\item President, Hindu YUVA (Youth for Unity, Virtues, and Actions) Chapter at Syracuse University 
+	\item Oak Codefest Hackathon -- Grand Prize Winner,2020 for building Travelling Salesman Problem based Travel Itinerary App.
+	\item Oak Codefest Hackathon -- First Runner up, 2019 for building a Liquid Galaxy based CNN for geography students
+	\item Technological Innovation Award, Stonehill International School. Given to one student who made impactful tech contributions
+\end{itemize}
+
+\end{document}
